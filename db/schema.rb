@@ -10,16 +10,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120313021615) do
+ActiveRecord::Schema.define(:version => 20120315024958) do
 
-  create_table "login_logs", :force => true do |t|
-    t.string   "imei"
-    t.string   "imsi"
-    t.string   "mobile"
-    t.string   "q"
-    t.string   "request_ip"
+  create_table "headers", :force => true do |t|
+    t.text     "dump"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "login_logs", :force => true do |t|
+    t.string   "channel"
+    t.string   "tel"
+    t.string   "imei"
+    t.string   "imsi"
+    t.string   "android_version"
+    t.string   "mobile_model"
+    t.string   "program"
+    t.string   "agent"
+    t.string   "x_forwarded_for"
+    t.string   "remote_ip"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
 end

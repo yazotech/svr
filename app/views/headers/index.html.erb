@@ -1,0 +1,7 @@
+<h2>Headers</h2>
+<%= link_to 'Clear', 'headers/delete' %>
+<% @headers.each do |h| %>
+<div>
+	<%= link_to h.created_at, h %>
+</div>
+<% end %>

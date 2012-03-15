@@ -1,7 +1,0 @@
-<table border="1">
-<% for header in request.env.select {|k,v| true} %>
-  <tr>
-    <td><%=header[0]%></td><td><%=header[1]%></td>
-  </tr>
-<% end %>
-</table>

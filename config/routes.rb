@@ -1,9 +1,9 @@
 Svr::Application.routes.draw do
-  match 'simple_req' => 'simple_req#index'
+  resources :headers
   resources :logins, :only => [:create], :path => 'login'
 
   scope '~svr' do
-	  match 'simple_req' => 'simple_req#index'
+	  resources :headers
     resources :logins, :only => [:create], :path => 'login'    
   end
 
